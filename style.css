@@ -1,87 +1,199 @@
+/* RESET: Ripristino dei margini e padding per tutti gli elementi */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
 
+/* Stile per il body */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: #0f0f0f;
-    color: #fff;
+  background-color: #111;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
 }
 
-.hero {
-    background: url('https://images.unsplash.com/photo-1589927986089-35812388d1d3?auto=format&fit=crop&w=1650&q=80') center/cover no-repeat;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+/* HEADER */
+header {
+  background: url('https://example.com/hero-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
 }
 
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    top: 0;
-    left: 0;
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
+header h1 {
+  font-size: 5rem;
+  color: #FF00FF;
+  text-shadow: 2px 2px 10px rgba(255, 0, 255, 0.8);
 }
 
-.hero h1 {
-    font-size: 5rem;
-    color: #fff;
-    text-shadow: 0 0 20px #f0f;
+header p {
+  font-size: 1.5rem;
+  margin-top: 20px;
 }
 
-.hero p {
-    font-size: 1.5rem;
-    margin: 10px 0;
+header .btn {
+  background-color: #FF6347;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(255, 99, 71, 0.8);
 }
 
-.cta .btn {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 10px;
-    border: 2px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    transition: all 0.3s ease;
+header .btn:hover {
+  background-color: #FF4500;
+  transition: background 0.3s ease;
 }
 
-.btn.neon {
-    background: #f0f;
-    border-color: #f0f;
-    color: #000;
-    box-shadow: 0 0 10px #f0f, 0 0 20px #f0f;
+/* SEZIONE EVENTI */
+.events {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #222;
 }
 
-.about, .tickets, .location {
-    padding: 60px 20px;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
+.events h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffcc00;
 }
 
-.ticket-options {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.event-card {
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 1rem;
+  box-shadow: 0 0 15px rgba(255, 99, 71, 0.8);
 }
 
-.ticket {
-    background: #1a1a1a;
-    padding: 20px;
-    border: 1px solid #444;
-    width: 200px;
+.event-card h3 {
+  font-size: 1.8rem;
+  color: #FF6347;
 }
 
+.event-card p {
+  font-size: 1rem;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+.event-card .btn {
+  background-color: #00FF00;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.event-card .btn:hover {
+  background-color: #00B300;
+}
+
+/* SEZIONE TESTIMONIANZE */
+.testimonials {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #444;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  margin-bottom: 2rem;
+}
+
+.testimonial {
+  font-size: 1.2rem;
+  color: #FF6347;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial cite {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* SEZIONE COUNTDOWN */
+.countdown {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #222;
+}
+
+.countdown h2 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  margin-bottom: 2rem;
+}
+
+.countdown-timer {
+  font-size: 3rem;
+  color: #FF6347;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 99, 71, 0.8);
+}
+
+/* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #000;
-    font-size: 0.9rem;
+  background-color: #333;
+  padding: 2rem;
+  text-align: center;
 }
+
+footer p {
+  font-size: 1rem;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #FF6347;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .event-card {
+    padding: 1rem;
+  }
+
+  .event-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .countdown-timer {
+    font-size: 2.5rem;
+  }
+}
+
